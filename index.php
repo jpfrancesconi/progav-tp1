@@ -57,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
    </header>
 
    <!-- Contenido principal -->
-   <div class="container-fluid">
+   <div class="container-fluid center_div">
      <div class="row-fluid">
      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4"></div>
 
