@@ -46,22 +46,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link href="css/bootstrap-responsive.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
  </head>
  <body>
   <header>
     <div class="container">
-			<h1>Trabajo Práctico 1 | Programacion Avanzada 2017</h1>
+			<h3>Trabajo Práctico 1 | Programacion Avanzada 2017</h3>
 		</div>
    </header>
 
    <!-- Contenido principal -->
-   <div class="container-fluid center_div">
-     <div class="row-fluid">
-     <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4"></div>
-
-      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+   <div class="container">
+     <div class="col-sm-6" style="margin: 0 auto;">
+      <div class="jumbotron">
+        <div class="form-group">
+          <h1>Bienvenido a WebApp!</h1>
+        </div>
          <?php if ($errores): ?>
             <ul style="color: #f00;">
                <?php foreach ($errores as $error): ?>
@@ -70,22 +70,30 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </ul>
          <?php endif; ?>
 
-         <form method="post" action="index.php" class="form-signin">
-           <h2>Ingreso al sistema</h2>
-            <input type="text" name="nombre" class="input-block-level" placeholder="usuario" />
-            <input type="password" name="password" class="input-block-level" placeholder="contraseña" />
-            <br/>
-            <input type="submit" class="btn btn-large btn-primary" value="Entrar" />
+         <form method="post" action="index.php" class="form-horizontal">
+           <div class="form-group input-group">
+             <span class="input-group-addon">
+               <span class="glyphicon glyphicon-user"></span>
+             </span>
+              <input type="text" name="nombre" class="form-control" placeholder="usuario" />
+           </div>
+           <div class="form-group input-group">
+              <input type="password" name="password" class="form-control" placeholder="contraseña" />
+           </div>
+           <div class="form-group">
+              <input type="submit" class="btn btn-large btn-primary" value="Entrar" />
+           </div>
+
          </form>
        </div>
-
-       <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4"></div>
      </div>
    </div>
 
     <footer>
       <div class="container">
-        <p>&copy; Todos los derechos reservados al Gupo 1: Perezlindo, Prinsich y Francesconi. 2017</p>
+        <div class="center_div">
+          <p>&copy; Todos los derechos reservados al Gupo 1: Perezlindo, Prinsich y Francesconi. 2017</p>
+        </div>
       </div>
     </footer>
 
